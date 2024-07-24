@@ -22,7 +22,7 @@ const Navbar = () => {
                     </Link>
                     {/* TODO: add mobile navbar */}
 
-                    <div className="hidden items-center space-x-4 sm:flex">
+                    <div className="hidden items-center sm:flex">
                         <>
                             <Link
                                 className={buttonVariants({
@@ -34,6 +34,15 @@ const Navbar = () => {
                                 Pricing
                             </Link>
                             <SignedIn>
+                                <Link
+                                    className={buttonVariants({
+                                        variant: "ghost",
+                                        size: "sm",
+                                    })}
+                                    href="/dashboard"
+                                >
+                                    Dashboard
+                                </Link>
                                 <UserButton></UserButton>
                             </SignedIn>
                             <SignedOut>
@@ -43,7 +52,8 @@ const Navbar = () => {
                                             size: "sm",
                                         })}
                                     >
-                                        Get started <ArrowRight className="ml-1.5 h-5 w-5" />
+                                        Get started{" "}
+                                        <ArrowRight className="ml-1.5 h-5 w-5" />
                                     </button>
                                 </SignInButton>
                             </SignedOut>
